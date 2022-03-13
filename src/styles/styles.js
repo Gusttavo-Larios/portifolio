@@ -1,52 +1,43 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Container = styled.div`
   width: 100%;
   padding-top: 10rem;
-  padding-bottom: 8rem;
   background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  overflow-x: hidden;
 `;
 
 export const People = styled.div`
   display: flex;
-  gap: 2.5rem;
   flex-direction: column;
   align-items: center;
-
-  .Box-Details-People {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .Box-Details-People .Box-Social-Media {
-    margin-top: 1rem;
-    display: flex;
-    gap: 1rem;
-  }
+  padding-left: 2rem;
+  padding-right: 2rem;
 `;
 
-export const Avatar = styled.img`
+export const Avatar = styled(motion.img)`
   width: 20rem;
   height: 20rem;
   border: 0.2rem solid #fff;
   border-radius: 50%;
+  box-shadow: 0 0 10rem 4rem rgba(12, 172, 245, 0.5);
 `;
 
-export const Name = styled.span`
+export const Presentation = styled(motion.span)`
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 4.8rem;
   line-height: 5.8rem;
   color: #ffffff;
+  margin-top: 4rem;
 `;
 
-export const Occupation = styled.span`
+export const Occupation = styled(motion.span)`
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
@@ -55,74 +46,78 @@ export const Occupation = styled.span`
   color: #dfdfdf;
 `;
 
-export const TitleSection = styled.h2`
+export const ContainerButtonsSocialMedia = styled(motion.div)`
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+`;
+
+export const Title = styled(motion.h2)`
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 3.6rem;
   line-height: 4.4rem;
   color: #ffffff;
+  margin-top: ${(props) => props.marginTop && props.marginTop};
+  text-align: center;
 `;
 
-export const Section = styled.section`
-  width: 80%;
-  margin: 0 auto;
+export const About = styled(motion.p)`
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 3rem;
+`;
+
+export const ContainerIconsTools = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3rem;
+  margin-top: 4.5rem;
+
+  @media (max-width: 900px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 3rem;
+  }
+`;
+
+export const IconTool = styled(motion.img)`
+   @media (max-width: 900px) {
+    margin: 0 auto;
+  }
+`;
+
+export const Section = styled(motion.section)`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
-  z-index: 2;
-
-  p {
-      color: #fff;
-      font-size: 1.8rem;
-      text-align: center;
-      font-weight: 300;
-  }
+  background-color: #151515;
+  margin-top: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 8rem;
 `;
 
-export const FlatList = styled.div`
+export const ContainerProjects = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2rem;
-`;
+  align-items: center;
+  gap: 10rem;
+  margin-top: 6rem;
 
-export const Project = styled.a`
-  padding: 2rem 3rem;
-  border-radius: 1.5rem;
-  background-color: #292929;
-  cursor: pointer;
-  transition: all .2s ease-in-out;
-
-  :hover {
-        transform: scale(1.2);
+  @media (max-width: 900px) {
+    flex-direction: column;
   }
-
-  .Name-Project {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    color: #ffffff;
-  }
-
-  .Language-Project {
-    margin-top: 1rem;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    color: #9a9a9a;
-  }
-`;
-
-export const ImageBackground = styled.img`
-  position: absolute;
-  top: -2rem;
-  right: -5rem;
-  width: 50vw;
 `;
