@@ -29,7 +29,7 @@ export const projects = [
     image: Pixel,
     name: "Pixel",
     description:
-      "Aplicação mobile para observar images obtidas através da API Lorem Picsum e salva-las no app.",
+      "Aplicação mobile para observar imagens obtidas através da API Lorem Picsum e salvá-las no storage.",
     language: "TypeScrip, Expo",
     link: "https://github.com/Gusttavo-Larios/Pixel",
   },
