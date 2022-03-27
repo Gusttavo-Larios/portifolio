@@ -32,6 +32,7 @@ export const Presentation = styled(motion.span)`
   font-style: normal;
   font-weight: 700;
   font-size: 4.8rem;
+  text-align: center;
   line-height: 5.8rem;
   color: #ffffff;
   margin-top: 4rem;
@@ -94,7 +95,7 @@ export const ContainerIconsTools = styled(motion.div)`
 `;
 
 export const IconTool = styled(motion.img)`
-   @media (max-width: 900px) {
+  @media (max-width: 900px) {
     margin: 0 auto;
   }
 `;
@@ -113,11 +114,9 @@ export const Section = styled(motion.section)`
 export const ContainerProjects = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 10rem;
   margin-top: 6rem;
-
-  @media (max-width: 900px) {
-    flex-direction: column;
-  }
 `;

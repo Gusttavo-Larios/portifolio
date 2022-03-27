@@ -33,11 +33,7 @@ function App() {
   const limitationRef = useRef(null);
 
   const { scrollYProgress } = useViewportScroll();
-  const animationOpacity = useTransform(
-    scrollYProgress,
-    [0.548, 0.723],
-    [0, 1]
-  );
+  const animationOpacity = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
 
   return (
     <Container>
