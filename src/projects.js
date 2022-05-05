@@ -2,6 +2,7 @@ import QuickDates1 from "./assets/images/quick-dates1.png";
 import QuickDates2 from "./assets/images/quick-dates2.svg";
 import StatsHealth from "./assets/images/stats-health.svg";
 import Pixel from "./assets/images/pixel.svg";
+import EForncedores from "./assets/images/eFornecedores.png";
 
 export const projects = [
   {
@@ -32,5 +33,13 @@ export const projects = [
       "Aplicação mobile para observar imagens obtidas através da API Lorem Picsum e salvá-las no storage.",
     language: "TypeScrip, Expo",
     link: "https://github.com/Gusttavo-Larios/Pixel",
+  },
+  {
+    image: EForncedores,
+    name: "eFornecedores",
+    description:
+      "Aplicação mobile desenvolvida para cadastrar, obter, atualizar e deletar fonecedores ficiticios.",
+    language: "TypeScrip, Expo, Redux Toolkit",
+    link: "https://github.com/Gusttavo-Larios/eFornecedores",
   },
 ];
